@@ -40,11 +40,6 @@
     box-shadow: 0 6px 0 0 lighten(@color-black, 30%), 0 12px 0 0 lighten(@color-black, 30%);
   }
 
-  .page-nav--closed .main-nav,
-  .page-nav--closed .account-nav {
-    display: none;
-  }
-
   .page-nav--opened .page-nav__hamburger {
     &::before,
     &::after {
@@ -88,6 +83,10 @@
   .page-nav__logo-link:focus {
     opacity: 0.6;
   }
+
+  .page-nav__main-nav {
+    margin-top: 30px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -111,6 +110,13 @@
     position: absolute;
     top: -5px;
     right: 40px;
+  }
+}
+
+@media (max-width: @pre-desktop-width) {
+  .page-nav--closed .main-nav,
+  .page-nav--closed .account-nav {
+    display: none;
   }
 }
 
